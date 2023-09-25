@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <style>
+        :root{
+            --width: 100vw;
+        }
+        .main_div{
+            width: calc(var(--width) - 50vw);
+            margin: auto;
+            height: 500px;
+            background-color: aqua;
+            padding: 50px;
+            display: none;
+            text-align: center
+        }
+        .main_div h1{
+            color: #0b71d1;
+            font-size: 5rem;
+        }
+        h1:after{
+            /* content: "\f005";
+            font-family: "Font Awesome 5 Free"; */
+            width: 20px;
+            height: 20px;
+            color: #0b71d1;
+            font-size: 3rem;
+            display: block;
+            text-align: center; 
+            margin: 0px auto;
+            border: 2px solid #0b71d1;
+        }
+        #show:checked ~ .main_div{
+            display: block;
+        }
+        .check
+        {
+            background-color: #0b71d1;
+            padding: 10px 20px;
+            border: 2px solid lightblue;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .check:hover{
+            background-color: greenyellow;
+            color: white;
+        }
+        .checkbox{
+            display: none;
+        }
+        .amber{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .x{
+            color: black;
+            font-weight: 600;
+            display: flex;
+            justify-content: end;
+            cursor: pointer;
+        }
+        .x:hover{
+            color: #0b71d1;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="show" class="checkbox">
+    <label for="show" class="check">Click me</label>
+    <div class="main_div">
+        
+        <label for="show" style="text-align: right !important; " class="x">X</label>
+        <div class="amber">
+            <h1>Amberdeep</h1>
+        </div>
+    </div>
+    
+</body>
+</html>
